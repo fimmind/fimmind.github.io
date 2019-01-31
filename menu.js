@@ -24,13 +24,15 @@ $("head").append('<link rel="stylesheet" href="https://use.fontawesome.com/relea
 
 $(document).ready(function() {
     $("body").prepend('<i class="fas fa-bars"></i>\n<nav>\n<lu>\n' + strMenuItems + '</lu>\n</nav>');
-    $(".fa-bars, nav").hover(function() {
+
+    $(".fa-bars, nav").mouseleave(function(event) {
         $("nav")
             .stop()
             .slideToggle(500);
-    }, function() {
+    });
+    $(".fa-bars").click(function() {
         $("nav")
             .stop()
-            .slideToggle(500)
+            .slideToggle(500);
     });
 });
