@@ -13,19 +13,19 @@ function getRandomNumbers(){
 }
 
 function getTask(){
-    $(".sum13title").html("Какое число пропущено?");
     let nums = getRandomNumbers();
-    console.log(nums);
     strSum = nums[0] + " + " + nums[1] + " + " + nums[2];
-    $(".sum13task").html(strSum + " + __ = 13");
     rightAnswer = 13 - nums[0] - nums[1] - nums[2];
+
+    $(".sum13title").html("");
+    $(".sum13task").html(strSum + " + __ = 13");
+
     console.log(rightAnswer);
 }
 
 $(document).ready(function() {
     getTask();
 
-    let inputedNumber = -1;
     for(let i = 1; i <= 12; ++i){
         $(".number" + String(i)).click(function(){
             if(i == rightAnswer){
