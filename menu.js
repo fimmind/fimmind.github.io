@@ -25,12 +25,11 @@ $("head").append('<link rel="stylesheet" href="https://use.fontawesome.com/relea
 $(document).ready(function() {
     $("body").prepend('<i class="fas fa-bars"></i>\n<nav>\n<lu>\n' + strMenuItems + '</lu>\n</nav>');
 
-    $(".fa-bars, nav").mouseleave(function(event) {
+    $(".fa-bars, nav").hover(function() {
         $("nav")
             .stop()
             .slideToggle(500);
-    });
-    $(".fa-bars").click(function() {
+    }, function() {
         $("nav")
             .stop()
             .slideToggle(500);
