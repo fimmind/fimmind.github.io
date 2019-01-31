@@ -2,3 +2,33 @@
     padding: 0px;
     margin: 0px;
 }
+
+p {
+        font-size: 8vw;
+}
+
+.sum13title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sum13task {
+    margin: 10px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sum13input {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5vw;
+    position: fixed;
+    bottom: 20px;
+}
+
+.sum13input p {
+    margin: 10px 0;
+}
