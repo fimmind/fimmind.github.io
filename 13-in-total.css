@@ -4,11 +4,12 @@
 }
 
 .task {
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 30px;
     border: 2px solid #000000;
     border-radius: 5px;
     text-align: center;
-    margin-top: 30px;
 }
 
 .input {
@@ -17,11 +18,18 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     position: fixed;
-    bottom: 20px;
+    bottom: 10px;
+}
+
+@media (handheld) (orientation: landscape) {
+    .input {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
 
 .input p {
-    padding: 10px 0;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .task span {

@@ -19,13 +19,20 @@ $("head")
     .append('<link rel="stylesheet" href="menu.css">')
     .append('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
 
-// awesome - библиотека для иконок
-$("head").append('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">')
-
 $(document).ready(function() {
-    $("body").prepend('<i class="fas fa-bars"></i>\n<nav>\n<lu>\n' + strMenuItems + '</lu>\n</nav>');
+    $("body").prepend('\
+    <div class="menuIcon">\
+        <span class="menuIconLine"></span>\
+        <span class="menuIconLine"></span>\
+        <span class="menuIconLine"></span>\
+    </div>\
+    <nav>\
+        <lu>' + 
+            strMenuItems +
+        '</lu>\
+    </nav>');
 
-    $(".fa-bars, nav").hover(function() {
+    $(".menuIcon, nav").hover(function() {
         $("nav")
             .stop()
             .slideToggle(500);

@@ -29,7 +29,10 @@ $(document).ready(function() {
     getTask();
 
     for(let i = 1; i <= 12; ++i){
-        $(".input .number" + String(i)).click(function(){
+        $(".input .number" + i).click(function(){
+            $(".input .number" + i)
+                .animate({"font-size": "30px"}, 50)
+                .animate({"font-size": "40px"}, 50);
             if(i == rightAnswer){
                 $(".title").html("Верно!");
                 $(".task .inputedNumber").html(i);
@@ -38,7 +41,7 @@ $(document).ready(function() {
                 });
             }
             else{
-                $(".title").html("Не верно...")
+                $(".title").html("Не верно...");
             }
         });
     }
