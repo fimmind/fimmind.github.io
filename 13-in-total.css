@@ -21,7 +21,7 @@
     bottom: 10px;
 }
 
-@media (handheld) (orientation: landscape) {
+@media (orientation: landscape) {
     .input {
         grid-template-columns: repeat(6, 1fr);
     }
