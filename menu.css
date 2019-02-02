@@ -31,8 +31,9 @@ nav a, nav p{
     background: #2d2d2d;
     width: 100vw;
     height: auto;
-    font-size: 8vw;
-    padding: 2vw;
+    font-size: 40px;
+    padding: 5px;
+    padding-left: 10px;
 }
 
 nav p {
