@@ -1,48 +1,47 @@
-var rightAnswer;
 var nums = [1, 0, 0];
+var rightAnswer = 12;
 
-function getRandomNumbers(){
-    var res = [0, 0, 0];
-    var currentSum = 0;
-    for(let i = 0; i < 3; ++i){
-        let randNum = Math.floor(Math.random() * (13 - currentSum));
-        res[i] = randNum;
-        currentSum += randNum;
+function getRandomNumbers() {
+  let currentSum = 0;
+  for (let i = -1; i < 2; ++i) {
+    let rand = Math.floor(Math.random() * (12 - currentSum)) + 1;
+    if (i < 0) {
+      rightAnswer = rand;
+    } else {
+      nums[i] = rand;
     }
-    return res;
+    currentSum += rand;
+  }
+  nums[2] = 13 - nums[0] - nums[1] - rightAnswer;
 }
 
-function getTask(){
-    nums = getRandomNumbers();
-    rightAnswer = 13 - nums[0] - nums[1] - nums[2];
+function getTask() {
+  getRandomNumbers();
 
-    $(".title").html("");
-    for(let i = 0; i < 3; i++){
-        $(".task .num" + (i + 1)).html(nums[i]);
-    }
-    $(".task .inputedNumber").html("__")
+  $(".title").html("");
+  for (let i = 0; i < 3; i++) {
+    $(".task .num" + (i + 1)).html(nums[i]);
+  }
+  $(".task .inputedNumber").html("__");
 
-    console.log(rightAnswer);
+  console.log(rightAnswer);
 }
 
-$(document).ready(function() {
-    getTask();
+$(document).ready(() => {
+  getTask();
 
-    for(let i = 1; i <= 12; ++i){
-        $(".input .number" + i).click(function(){
-            $(".input .number" + i)
-                .animate({"font-size": "30px"}, 50)
-                .animate({"font-size": "40px"}, 50);
-            if(i == rightAnswer){
-                $(".title").html("Верно!");
-                $(".task .inputedNumber").html(i);
-                (new Promise((resolve) => setTimeout(resolve, 750))).then(function(){
-                    getTask();
-                });
-            }
-            else{
-                $(".title").html("Не верно...");
-            }
-        });
-    }
+  for (let i = 1; i <= 12; ++i) {
+    $(".input .number" + i).click(() => {
+      $(".input .number" + i)
+        .animate({ "font-size": "30px" }, 50)
+        .animate({ "font-size": "40px" }, 50);
+      if (i == rightAnswer) {
+        $(".title").html("Верно!");
+        $(".task .inputedNumber").html(i);
+        new Promise((resolve) => setTimeout(resolve, 750)).then(getTask);
+      } else {
+        $(".title").html("Не верно...");
+      }
+    });
+  }
 });
