@@ -1,48 +1,48 @@
 body {
-    background: #fff;
-    margin: 0 auto;
-    position: fixed;
-
+  background: #fff;
+  margin: 0 auto;
+  position: fixed;
 }
 
 nav {
-    display: none;
-    background: #2d2d2d;
-    width: 100%;
-    position: fixed;
+  display: none;
+  background: #2d2d2d;
+  width: 100%;
+  position: fixed;
 }
 
 nav li {
-    list-style: none;
+  list-style: none;
 }
 
-nav a, nav p{
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 20px;
-    display: list-item;
+nav a,
+nav p {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  display: list-item;
 }
 
 .menuIcon {
-    background: #2d2d2d;
-    width: 100vw;
-    height: auto;
-    padding: 5px;
+  background: #2d2d2d;
+  width: 100vw;
+  height: auto;
+  padding: 5px;
 }
 
 .menuIcon span {
-    border: 1px solid white;
-    border-radius: 2px;
-    height: 1px;
-    width: 20px;
-    margin: 5px;
-    display: block;
-    background: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  height: 1px;
+  width: 20px;
+  margin: 5px;
+  display: block;
+  background: white;
 }
 
 nav p {
-    background: #210505;
+  background: #210505;
 }
 
 /* @media screen and (orientation: landscape) {

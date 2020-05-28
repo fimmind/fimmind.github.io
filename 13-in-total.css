@@ -1,37 +1,36 @@
-
 .title {
-    text-align: center;
+  text-align: center;
 }
 
 .task {
-    margin-left: 10px;
-    margin-right: 20px;
-    margin-top: 30px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    text-align: center;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 30px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .input {
-    width: 100%;
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    position: fixed;
-    bottom: 10px;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: fixed;
+  bottom: 10px;
 }
 
 @media (orientation: landscape) {
-    .input {
-        grid-template-columns: repeat(6, 1fr);
-    }
+  .input {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .input p {
-    padding: 5px;
-    cursor: pointer;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .task span {
-    font-size: 40px;
+  font-size: 40px;
 }
